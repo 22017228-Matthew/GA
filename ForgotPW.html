@@ -1,0 +1,127 @@
+<!-- Page 4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimplyPay - Forgot Password</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-image: url(bank.svg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 4px;
+      margin-bottom: 100px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #error {
+      color: red;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="row justify-content-center">
+    <h1>SimplePay</h1>
+      <div class="container">
+        <h2>Forgot Password</h2>
+        <p>Enter your email address to reset your password.</p>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <button id="resetBtn">Reset Password</button>
+        <p id="message" class="hidden"></p>
+      </div>
+      <p>To go back to the login page <a href="Login.html">Click here</a></p>
+    </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const resetBtn = document.getElementById("resetBtn");
+          const message = document.getElementById("message");
+          const emailInput = document.getElementById("email");
+
+          resetBtn.addEventListener("click", function () {
+            const email = emailInput.value;
+
+            if (email === "") {
+              message.textContent = "Please enter your email.";
+              message.classList.add("error");
+            } else {
+              message.textContent = "An email with further instructions has been sent to your email address.";
+              message.classList.remove("error");
+            }
+
+            message.classList.remove("hidden");
+          });
+        });
+        
+      </script>
+</body>
+
+</html>

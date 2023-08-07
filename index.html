@@ -1,0 +1,180 @@
+<!-- Page 5 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimplyPay - index</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      background-image: url(bank.svg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 4px;
+      margin-bottom: 100px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-title {
+      margin: 0;
+      padding-left: 10px;
+    }
+
+    .sidebar {
+      background-color: #f0f0f0;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      padding-top: 70px;
+      transition: left 0.3s;
+    }
+
+    .sidebar-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar-menu li {
+      padding: 15px;
+      cursor: pointer;
+    }
+
+    .sidebar-menu li:hover {
+      background: #f0f0f0;
+    }
+
+    .sidebar-menu li i {
+      margin-right: 12px;
+    }
+    
+    .sidebar-menu a {
+      text-decoration: none;
+    }
+
+    /* For smaller devices */
+    @media (max-width: 768px) {
+      .header-title {
+        display: none;
+      }
+
+      .header-container {
+        justify-content: space-between;
+      }
+
+      .sidebar {
+        left: 0;
+        width: 200px;
+        padding-top: 60px;
+      }
+
+      .sidebar-menu li {
+        padding: 10px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-container">
+      <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#sidebarToggle" role="button" aria-controls="offcanvasExample">
+        <i class="fas fa-bars" id="menuToggle"></i>
+      </a>
+      <h3 class="header-title">index</h3>
+    </div>
+  </header>
+
+  <!-- SIDEBAR OFFCANVAS -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarToggle" aria-labelledby="sidebarToggle">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title"></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <img src="UserAvatar.png" alt="User Avatar" class="avatar">
+      <h4><b>James</b></h4>
+      <p>jtsh123@gmail.com</p>
+      <hr/>
+      <ul class="sidebar-menu">
+        <a href="Settings.html"></button>
+          <li><i class="fas fa-cog"></i>Settings</li>
+        </a>
+        <a href="index.html">
+          <li><i class="fas fa-index"></i>Home</li>
+        </a>
+        <!--  For navigation to second sidebar  -->
+        <a href="Profile.html"></button>
+          <li><i class="fa-solid fa-user"></i>Profile</li>
+        </a>
+        <a href="ContactUs.html">
+          <li><i class="fas fa-phone"></i> Contact Us</li>
+        </a>
+        <a href="LogOut.html">
+          <li><i class="fas fa-sign-out-alt"></i>Logout</li>
+        </a>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <h1>SimplePay</h1>
+    <div class="container">
+      <h2>index Description</h2>
+      <p>Description: Our business is to make the transactions of your payment fast and efficient as
+        possible
+        and issuing e-money to allow our users to pay merchants or transfer to another</p>
+      <br>
+      <p>Financial Service offered: Our business is to make the transactions fast and efficient because the customers will like efficiency
+        now
+        as it is convenient and it saves them time to do other things and increase productivity. </p>
+    </div>
+  </div>
+
+</body>
+
+</html>
