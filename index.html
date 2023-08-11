@@ -1,179 +1,120 @@
-<!-- Page 5 -->
+<!-- Page 1 -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SimplyPay - index</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>index Page</title>
   <style>
     body {
       background-image: url(bank.svg);
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-      width: 100%;
+      font-family: sans-serif;
+      background-color: #f5f5f5;
     }
 
     h1 {
       text-align: center;
-      margin-top: 4px;
-      margin-bottom: 100px;
     }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
+    a {
+      color: blue;
     }
 
-    .header {
-      background-color: #007bff;
-      color: #fff;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    form {
+      margin-top: 50px;
     }
 
-    .header-container {
-      display: flex;
-      align-items: center;
+    .form-group {
+      margin-bottom: 10px;
     }
 
-    .header-title {
-      margin: 0;
-      padding-left: 10px;
+    .form-control {
+      width: 100%;
     }
 
-    .sidebar {
-      background-color: #f0f0f0;
-      position: fixed;
-      top: 0;
-      left: -250px;
-      width: 250px;
-      height: 100%;
-      padding-top: 70px;
-      transition: left 0.3s;
-    }
-
-    .sidebar-menu {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .sidebar-menu li {
-      padding: 15px;
-      cursor: pointer;
-    }
-
-    .sidebar-menu li:hover {
-      background: #f0f0f0;
-    }
-
-    .sidebar-menu li i {
-      margin-right: 12px;
-    }
-    
-    .sidebar-menu a {
-      text-decoration: none;
-    }
-
-    /* For smaller devices */
-    @media (max-width: 768px) {
-      .header-title {
-        display: none;
-      }
-
-      .header-container {
-        justify-content: space-between;
-      }
-
-      .sidebar {
-        left: 0;
-        width: 200px;
-        padding-top: 60px;
-      }
-
-      .sidebar-menu li {
-        padding: 10px;
-      }
+    .btn {
+      margin-top: 10px;
     }
   </style>
-
 </head>
 
 <body>
-  <header class="header">
-    <div class="header-container">
-      <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#sidebarToggle" role="button" aria-controls="offcanvasExample">
-        <i class="fas fa-bars" id="menuToggle"></i>
-      </a>
-      <h3 class="header-title">Home</h3>
-    </div>
-  </header>
-
-  <!-- SIDEBAR OFFCANVAS -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarToggle" aria-labelledby="sidebarToggle">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title"></h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <img src="UserAvatar.png" alt="User Avatar" class="avatar">
-      <h4><b>James</b></h4>
-      <p>jtsh123@gmail.com</p>
-      <hr/>
-      <ul class="sidebar-menu">
-        <a href="Settings.html"></button>
-          <li><i class="fas fa-cog"></i>Settings</li>
-        </a>
-        <a href="index.html">
-          <li><i class="fas fa-home"></i>Home</li>
-        </a>
-        <!--  For navigation to second sidebar  -->
-        <a href="Profile.html"></button>
-          <li><i class="fa-solid fa-user"></i>Profile</li>
-        </a>
-        <a href="ContactUs.html">
-          <li><i class="fas fa-phone"></i> Contact Us</li>
-        </a>
-        <a href="LogOut.html">
-          <li><i class="fas fa-sign-out-alt"></i>Logout</li>
-        </a>
-      </ul>
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="email"><b>Email address</b></label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <br>
+          <label for="password"><b>Password</b></label>
+          <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <p><input class="btn btn-primary index" type="submit" value="index"></p>
+        </div>
+        <p>Forgot your password? <a href="ForgotPW.html">Click here</a></p>
+        <p>Don't have an account? <a href="Signup.html">Sign up</a></p>
+      </div>
+      <div class="col-md-4"></div>
     </div>
   </div>
 
-  <div class="row justify-content-center">
-    <h1>SimplePay</h1>
-    <div class="container">
-      <h2>Home Description</h2>
-      <p>Description: Our business is to make the transactions of your payment fast and efficient as
-        possible
-        and issuing e-money to allow our users to pay merchants or transfer to another</p>
-      <br>
-      <p>Financial Service offered: Our business is to make the transactions fast and efficient because the customers will like efficiency
-        now
-        as it is convenient and it saves them time to do other things and increase productivity. </p>
-    </div>
-  </div>
+  <script>
+    // Function to validate email format
+    function validateEmail(email) {
+      // Regular expression pattern for email validation
+      var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return pattern.test(email);
+    }
+
+    // Function to validate password format
+    function validatePassword(password) {
+      // Regular expression pattern for password validation
+      var pattern = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+      return pattern.test(password);
+    }
+
+    // Function to handle index form submission
+    function handleindex() {
+      // Get the values of email and password fields
+      var email = document.getElementsByName('email')[0].value;
+      var password = document.getElementsByName('password')[0].value;
+
+      // Check if email and password are not empty
+      if (email.trim() === '' || password.trim() === '') {
+        alert('Please enter both email and password.');
+        return;
+      }
+
+      // Check if email is valid
+      if (!validateEmail(email)) {
+        alert('Invalid email format.');
+        return;
+      }
+
+      // Check if password is valid
+      if (!validatePassword(password)) {
+        alert('Invalid password format. Password must be at least 8 characters long and contain at least one number, one symbol and one uppercase letter.');
+        return;
+      }
+
+      // If all validations pass, perform index logic
+      location.href = "Home.html"
+    }
+
+    // Add event listener to the index button
+    var indexButton = document.querySelector('.index');
+    indexButton.addEventListener('click', handleindex);
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
