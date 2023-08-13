@@ -32,6 +32,12 @@
       width: 100%;
     }
 
+    h1 {
+      text-align: center;
+      margin-top: 4px;
+      margin-bottom: 100px;
+    }
+
     h2 {
       text-align: center;
     }
@@ -79,32 +85,36 @@
 </head>
 
 <body>
-  <div class="container">
-    <h2>Verify Your Account</h2>
-    <p>Enter your phone number to confirm your account.</p>
-    <div class="form-group">
-      <label for="phoneNum">Phone Number</label>
-      <input type="phoneNum" id="phoneNum" placeholder="Enter your phone number" required>
+  <div class="row justify-content-center">
+  <h1>SimplyPay</h1>
+    <div class="container">
+      <h2>Verify Your Account</h2>
+      <p>Enter your phone number to confirm your account.</p>
+      <div class="form-group">
+        <label for="phoneNum">Phone Number</label>
+        <input type="phoneNum" id="phoneNum" placeholder="Enter your phone number" required>
+      </div>
+      <button id="completeRegistryBtn">Complete Registration</button>
+      <p id="message" class="hidden"></p>
     </div>
-    <button id="completeRegistryBtn">Complete Registration</button>
-    <p id="message" class="hidden"></p>
+  <p>To go back to the Login page <a href="index.html">Click here</a></p>
   </div>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-    const completeRegistryBtn = document.getElementById("completeRegistryBtn");
-    const message = document.getElementById("message");
-    const phoneNumInput = document.getElementById("phoneNum");
+      const completeRegistryBtn = document.getElementById("completeRegistryBtn");
+      const message = document.getElementById("message");
+      const phoneNumInput = document.getElementById("phoneNum");
 
-    completeRegistryBtn.addEventListener("click", function () {
+      completeRegistryBtn.addEventListener("click", function () {
         const phoneNum = phoneNumInput.value;
 
         if (phoneNum === "") {
-            message.textContent = "Please enter your phone number.";
-            message.classList.add("error");
+          message.textContent = "Please enter your phone number.";
+          message.classList.add("error");
         } else {
-            message.textContent = "An email has been sent to your email address to confirm your account.";
-            message.classList.remove("error");
+          message.textContent = "An email has been sent to your email address to confirm your account.";
+          message.classList.remove("error");
         }
 
         message.classList.remove("hidden");
